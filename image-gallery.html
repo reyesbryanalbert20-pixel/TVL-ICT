@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Image Gallery</title>
 <link rel="stylesheet" href="style.css">
+
 <style>
 .pop-up {
     opacity: 0;
@@ -15,8 +16,15 @@
     opacity: 1;
     transform: translateY(0);
 }
+.mySlides {
+    display: none;
+}
+.container img {
+    width: 100%;
+}
 </style>
 </head>
+
 <body>
 
 <header class="header">
@@ -31,120 +39,162 @@
 
 <div class="content">
 
-    <h1 class="pop-up">Animation Subject</h1>
 
-    <div class="container pop-up">
+<h1 class="pop-up">Computer Programming Subject</h1>
 
-        <div class="mySlides animSlides">
-            <img src="anim1.jpg">
-        </div>
-        <div class="mySlides animSlides">
-            <img src="anim2.jpg">
-        </div>
-        <div class="mySlides animSlides">
-            <img src="anim3.jpg">
-        </div>
-        <div class="mySlides animSlides">
-            <img src="anim4.jpg">
-        </div>
+<div class="container pop-up">
 
-        <a class="prev" onclick="plusAnim(-1)">❮</a>
-        <a class="next" onclick="plusAnim(1)">❯</a>
-
-        <div class="caption-container">
-            <p id="animCaption"></p>
-        </div>
-
-        <div class="row pop-up">
-            <div class="column">
-                <img class="demo animThumb" src="anim1.jpg" onclick="currentAnim(1)" alt="Animation 1">
-            </div>
-            <div class="column">
-                <img class="demo animThumb" src="anim2.jpg" onclick="currentAnim(2)" alt="Animation 2">
-            </div>
-            <div class="column">
-                <img class="demo animThumb" src="anim3.jpg" onclick="currentAnim(3)" alt="Animation 3">
-            </div>
-            <div class="column">
-                <img class="demo animThumb" src="anim4.jpg" onclick="currentAnim(4)" alt="Animation 4">
-            </div>
-        </div>
-
+    <div class="mySlides progSlides">
+        <img src="prog1.jpg">
+    </div>
+    <div class="mySlides progSlides">
+        <img src="prog2.jpg">
+    </div>
+    <div class="mySlides progSlides">
+        <img src="prog3.jpg">
+    </div>
+    <div class="mySlides progSlides">
+        <img src="prog4.jpg">
     </div>
 
-    <h1 class="pop-up">Computer System Servicing Subject</h1>
+    <a class="prev" onclick="plusProg(-1)">❮</a>
+    <a class="next" onclick="plusProg(1)">❯</a>
 
-    <div class="container pop-up">
+    <div class="caption-container">
+        <p id="progCaption"></p>
+    </div>
 
-        <div class="mySlides cssSlides">
-            <img src="css1.jpg">
+    <div class="row pop-up">
+        <div class="column">
+            <img class="demo progThumb" src="prog1.jpg" onclick="currentProg(1)" alt="Programming 1">
         </div>
-        <div class="mySlides cssSlides">
-            <img src="css2.jpg">
+        <div class="column">
+            <img class="demo progThumb" src="prog2.jpg" onclick="currentProg(2)" alt="Programming 2">
         </div>
-        <div class="mySlides cssSlides">
-            <img src="css3.jpg">
+        <div class="column">
+            <img class="demo progThumb" src="prog3.jpg" onclick="currentProg(3)" alt="Programming 3">
         </div>
-        <div class="mySlides cssSlides">
-            <img src="css4.jpg">
+        <div class="column">
+            <img class="demo progThumb" src="prog4.jpg" onclick="currentProg(4)" alt="Programming 4">
         </div>
-
-        <a class="prev" onclick="plusCSS(-1)">❮</a>
-        <a class="next" onclick="plusCSS(1)">❯</a>
-
-        <div class="caption-container">
-            <p id="cssCaption"></p>
-        </div>
-
-        <div class="row pop-up">
-            <div class="column">
-                <img class="demo cssThumb" src="css1.jpg" onclick="currentCSS(1)" alt="CSS Activity 1">
-            </div>
-            <div class="column">
-                <img class="demo cssThumb" src="css2.jpg" onclick="currentCSS(2)" alt="CSS Activity 2">
-            </div>
-            <div class="column">
-                <img class="demo cssThumb" src="css3.jpg" onclick="currentCSS(3)" alt="CSS Activity 3">
-            </div>
-            <div class="column">
-                <img class="demo cssThumb" src="css4.jpg" onclick="currentCSS(4)" alt="CSS Activity 4">
-            </div>
-        </div>
-
     </div>
 
 </div>
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-box">
-            <h3>TVL-ICT</h3>
-            <p>
-                Empowering students with practical ICT skills to build,
-                innovate, and succeed in the digital world.
-            </p>
+
+<h1 class="pop-up">Animation Subject</h1>
+
+<div class="container pop-up">
+
+    <div class="mySlides animSlides">
+        <img src="anim1.jpg">
+    </div>
+    <div class="mySlides animSlides">
+        <img src="anim2.jpg">
+    </div>
+    <div class="mySlides animSlides">
+        <img src="anim3.jpg">
+    </div>
+    <div class="mySlides animSlides">
+        <img src="anim4.jpg">
+    </div>
+
+    <a class="prev" onclick="plusAnim(-1)">❮</a>
+    <a class="next" onclick="plusAnim(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="animCaption"></p>
+    </div>
+
+    <div class="row pop-up">
+        <div class="column">
+            <img class="demo animThumb" src="anim1.jpg" onclick="currentAnim(1)" alt="Animation 1">
         </div>
-        <div class="footer-box">
-            <h3>Quick Links</h3>
-            <a href="main-page.html">About LCBA</a>
-            <a href="ict-page.html">About TVL-ICT</a>
-            <a href="image-gallery.html">Image Gallery</a>
-            <a href="video-gallery.html">Video Gallery</a>
-            <a href="game.html">Game</a>
+        <div class="column">
+            <img class="demo animThumb" src="anim2.jpg" onclick="currentAnim(2)" alt="Animation 2">
         </div>
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <p>Email: info@lcba.edu</p>
-            <p>Phone: 0961-074-5530</p>
+        <div class="column">
+            <img class="demo animThumb" src="anim3.jpg" onclick="currentAnim(3)" alt="Animation 3">
+        </div>
+        <div class="column">
+            <img class="demo animThumb" src="anim4.jpg" onclick="currentAnim(4)" alt="Animation 4">
         </div>
     </div>
 
-    <div class="copyright">
-        <p>© 2026 LCBA TVL-ICT. All Rights Reserved.</p>
+</div>
+
+
+<h1 class="pop-up">Computer System Servicing Subject</h1>
+
+<div class="container pop-up">
+
+    <div class="mySlides cssSlides">
+        <img src="css1.jpg">
     </div>
-</footer>
+    <div class="mySlides cssSlides">
+        <img src="css2.jpg">
+    </div>
+    <div class="mySlides cssSlides">
+        <img src="css3.jpg">
+    </div>
+    <div class="mySlides cssSlides">
+        <img src="css4.jpg">
+    </div>
+
+    <a class="prev" onclick="plusCSS(-1)">❮</a>
+    <a class="next" onclick="plusCSS(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="cssCaption"></p>
+    </div>
+
+    <div class="row pop-up">
+        <div class="column">
+            <img class="demo cssThumb" src="css1.jpg" onclick="currentCSS(1)" alt="CSS Activity 1">
+        </div>
+        <div class="column">
+            <img class="demo cssThumb" src="css2.jpg" onclick="currentCSS(2)" alt="CSS Activity 2">
+        </div>
+        <div class="column">
+            <img class="demo cssThumb" src="css3.jpg" onclick="currentCSS(3)" alt="CSS Activity 3">
+        </div>
+        <div class="column">
+            <img class="demo cssThumb" src="css4.jpg" onclick="currentCSS(4)" alt="CSS Activity 4">
+        </div>
+    </div>
+
+</div>
+
+</div>
+
 
 <script>
+
+let progIndex = 1;
+showProg(progIndex);
+
+function plusProg(n) { showProg(progIndex += n); }
+function currentProg(n) { showProg(progIndex = n); }
+
+function showProg(n) {
+    let slides = document.getElementsByClassName("progSlides");
+    let thumbs = document.getElementsByClassName("progThumb");
+    let caption = document.getElementById("progCaption");
+
+    if (n > slides.length) { progIndex = 1 }
+    if (n < 1) { progIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++)
+        slides[i].style.display = "none";
+
+    for (let i = 0; i < thumbs.length; i++)
+        thumbs[i].classList.remove("active");
+
+    slides[progIndex - 1].style.display = "block";
+    thumbs[progIndex - 1].classList.add("active");
+    caption.innerText = thumbs[progIndex - 1].alt;
+}
+
 let animIndex = 1;
 showAnim(animIndex);
 
@@ -155,10 +205,16 @@ function showAnim(n) {
     let slides = document.getElementsByClassName("animSlides");
     let thumbs = document.getElementsByClassName("animThumb");
     let caption = document.getElementById("animCaption");
+
     if (n > slides.length) { animIndex = 1 }
     if (n < 1) { animIndex = slides.length }
-    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-    for (let i = 0; i < thumbs.length; i++) { thumbs[i].classList.remove("active"); }
+
+    for (let i = 0; i < slides.length; i++)
+        slides[i].style.display = "none";
+
+    for (let i = 0; i < thumbs.length; i++)
+        thumbs[i].classList.remove("active");
+
     slides[animIndex - 1].style.display = "block";
     thumbs[animIndex - 1].classList.add("active");
     caption.innerText = thumbs[animIndex - 1].alt;
@@ -174,10 +230,16 @@ function showCSS(n) {
     let slides = document.getElementsByClassName("cssSlides");
     let thumbs = document.getElementsByClassName("cssThumb");
     let caption = document.getElementById("cssCaption");
+
     if (n > slides.length) { cssIndex = 1 }
     if (n < 1) { cssIndex = slides.length }
-    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-    for (let i = 0; i < thumbs.length; i++) { thumbs[i].classList.remove("active"); }
+
+    for (let i = 0; i < slides.length; i++)
+        slides[i].style.display = "none";
+
+    for (let i = 0; i < thumbs.length; i++)
+        thumbs[i].classList.remove("active");
+
     slides[cssIndex - 1].style.display = "block";
     thumbs[cssIndex - 1].classList.add("active");
     caption.innerText = thumbs[cssIndex - 1].alt;
@@ -188,12 +250,13 @@ function checkPopUp() {
     const triggerBottom = window.innerHeight * 0.85;
     popUps.forEach(el => {
         const elTop = el.getBoundingClientRect().top;
-        if (elTop < triggerBottom) { el.classList.add('active'); } 
-        else { el.classList.remove('active'); }
+        if (elTop < triggerBottom) el.classList.add('active');
+        else el.classList.remove('active');
     });
 }
 window.addEventListener('scroll', checkPopUp);
 window.addEventListener('load', checkPopUp);
+
 </script>
 
 </body>
