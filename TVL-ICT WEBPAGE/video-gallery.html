@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Gallery</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .pop-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+        .pop-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo"><a href="main-page.html">LCBA</a></div>
+
+        <nav class="nav">
+            <a href="ict-page.html">TVL-ICT</a>
+            <a href="image-gallery.html">Gallery</a>
+            <a href="video-gallery.html">Video</a>
+            <a href="game.html">Games</a>
+        </nav>
+    </header>
+    
+    <div class="video-content pop-up">
+
+        <div class="title">
+            <h1>Video Gallery</h1>
+        </div>
+
+        <div class="video-section">
+            <video controls>
+                <source src="CSS Tutorial Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="desc">
+                <h3>Folder Redirection Configuration & Demonstration</h3>
+                <p>
+                    Watch and learn how to properly configure Folder Redirection in a 
+                    Windows Server environment. This demonstration will guide you 
+                    step-by-step on how to redirect user folders such as Documents, 
+                    Desktop, and Downloads to a centralized server location.
+                </p>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <video controls>
+                <source src="HE Marketing Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="desc">
+                <h3>HE Marketing Video</h3>
+                <p>
+                    Watch the marketing video made by the ICT students for the product 
+                    of Home Economics (HE) students.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <h3>TVL-ICT</h3>
+            <p>
+                Empowering students with practical ICT skills to build,
+                innovate, and succeed in the digital world.
+            </p>
+        </div>
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="main-page.html">About LCBA</a>
+            <a href="ict-page.html">About TVL-ICT</a>
+            <a href="image-gallery.html">Image Gallery</a>
+            <a href="video-gallery.html">Video Gallery</a>
+            <a href="game.html">Game</a>
+        </div>
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: info@lcba.edu</p>
+            <p>Phone: 0961-074-5530</p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 LCBA TVL-ICT. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        const popUps = document.querySelectorAll('.pop-up');
+
+        function checkPopUp() {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            popUps.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+
+                if (elTop < triggerBottom) {
+                    el.classList.add('active');
+                } else {
+                    el.classList.remove('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkPopUp);
+        window.addEventListener('load', checkPopUp);
+    </script>
+
+</body>
+</html>
