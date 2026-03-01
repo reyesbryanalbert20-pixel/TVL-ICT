@@ -678,5 +678,13 @@ a:hover{
         margin-left: 0;
         font-size: 14px;
     }
+
+    .logo_lcba {
+        width: 30px;
+    }
+}
+
+.logo_lcba {
+    width: 60px;
 }
 
